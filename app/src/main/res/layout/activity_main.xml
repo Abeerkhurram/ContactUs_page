@@ -39,6 +39,16 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="43dp"
+
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -72,6 +82,15 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <ImageView
+            android:layout_width="49dp"
+            android:layout_height="42dp"
+
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -105,6 +124,15 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <ImageView
+            android:layout_width="49dp"
+            android:layout_height="42dp"
+
+            android:layout_marginLeft="97dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -139,6 +167,15 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <ImageView
+            android:layout_width="49dp"
+            android:layout_height="42dp"
+
+            android:layout_marginLeft="109dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+
+            />
     </LinearLayout>
 
     <EditText
