@@ -6,18 +6,157 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/web_site"
+        android:layout_width="391dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="12dp"
+        android:background="#192D9B"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/good_books"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/good_books"
+        app:layout_constraintTop_toBottomOf="@+id/good_books">
+
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/baseline_web_asset_24"
+
+            />
+
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="VISIT OUT WEBSITE"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/good_books"
+        android:layout_width="385dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:background="#F7C42020"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/what_app_usa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/what_app_usa"
+        app:layout_constraintTop_toBottomOf="@+id/what_app_usa" >
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/baseline_whatsapp_24"
+
+            />
+        <TextView
+            android:id="@+id/goodword"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="GOODWORD BOOKS"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/what_app_usa"
+        android:layout_width="383dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="#2A0460"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/what_app"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/what_app"
+        app:layout_constraintTop_toBottomOf="@+id/what_app" >
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/baseline_whatsapp_24"
+
+            />
+        <TextView
+            android:id="@+id/whats_app_us"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="WHATSAPP (USA)"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/what_app"
+        android:layout_width="383dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="448dp"
+        android:background="#075E54"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/baseline_whatsapp_24"
+
+            />
+        <TextView
+            android:id="@+id/whats_app"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="WHATSAPP (PK)"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <EditText
         android:id="@+id/editTextTextPersonName4"
-        android:layout_width="387dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="388dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_input_title"
         android:ems="10"
-        android:hint="Title"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="top"
+
+        android:hint="Please write your Message"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:singleLine="false"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
     <LinearLayout
@@ -94,5 +233,33 @@
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="99dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="294dp"
+        android:background="#2A0460"
+        android:text="SEND"
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="OR"
+        android:textStyle="bold"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
