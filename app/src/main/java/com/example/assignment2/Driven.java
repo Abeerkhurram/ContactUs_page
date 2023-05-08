@@ -29,6 +29,7 @@ public class Driven extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("https://github.com/Abeerkhurram/ContactUs_page"));
+
                 startActivity(intent);
             }
         });
@@ -36,6 +37,7 @@ public class Driven extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 intobj=new Intent(getApplicationContext(),MainActivity.class);
+
                 startActivity(intobj);
                 setContentView(R.layout.activity_main);
             }

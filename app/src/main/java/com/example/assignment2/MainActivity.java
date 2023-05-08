@@ -7,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout whatsapp;
     Intent intobj;
 
+    Button sent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
@@ -30,6 +33,25 @@ public class MainActivity extends AppCompatActivity {
         goodbooks=(LinearLayout)findViewById(R.id.good_books);
         web_site=(LinearLayout)findViewById(R.id.web_site);
          obj=(LinearLayout)findViewById(R.id.what_app_usa);
+         sent=(Button)findViewById(R.id.send);
+
+         sent.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 String to="abeerkhurram123@gmail.com";
+                 EditText edt1=(EditText) findViewById(R.id.editTextTextPersonName3);
+                 EditText edt2=(EditText) findViewById(R.id.editTextTextPersonName4);
+                 Intent email = new Intent(Intent.ACTION_SEND);
+                    String subject=edt1.getText().toString();
+                    String message=edt2.getText().toString();
+                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
+                 email.putExtra(Intent.EXTRA_SUBJECT, subject);
+                 email.putExtra(Intent.EXTRA_TEXT, message);
+                 email.setType("message/rfc822");
+                 startActivity(email);
+
+             }
+         });
         obj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,30 +84,23 @@ public class MainActivity extends AppCompatActivity {
         imgbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent bk=new Intent(getApplicationContext(),Driven.class);
+                startActivity(bk);
+
+                setContentView(R.layout.activity_driven);
             }
         });
     }
     private void listener()
     {
-        boolean isAppInstalled = appInstalledOrNot("com.whatsapp");
-        if(isAppInstalled) {
+
+
             Intent what = new Intent(Intent.ACTION_VIEW);
             String message = "";
             String number = "tel:+923217865622";
             what.setData(Uri.parse("whatsapp://send?phone=" + number + "&text=" + message));
             startActivity(what);
-            }
-        }
-    private boolean appInstalledOrNot(String uri) {
-        PackageManager pm = getPackageManager();
-        try {
-            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
-            return true;
-        } catch (PackageManager.NameNotFoundException e) {
-            Toast.makeText(this, "WhatsApp Not installed", Toast.LENGTH_SHORT).show();
+
         }
 
-        return false;
-    }
 }
